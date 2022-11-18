@@ -42,7 +42,7 @@ following will output a list of processes running in the container:
 			Usage: "set environment variables",
 		},
 		cli.StringFlag{
-			Name:  "config, configpath",
+			Name:  "config, a",
 			Value: "",
 			Usage: `path to a config file, which overrides the default config.json in the specified bundle directory`,
 		},
