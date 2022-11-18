@@ -41,6 +41,11 @@ following will output a list of processes running in the container:
 			Name:  "env, e",
 			Usage: "set environment variables",
 		},
+		cli.StringFlag{
+			Name:  "config, c",
+			Value: "",
+			Usage: `path to a config file, which overrides the default config.json in the specified bundle directory`,
+		},
 		cli.BoolFlag{
 			Name:  "tty, t",
 			Usage: "allocate a pseudo-TTY",
