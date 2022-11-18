@@ -60,6 +60,11 @@ using the runc checkpoint command.`,
 			Value: "",
 			Usage: "path to the root of the bundle directory",
 		},
+		cli.StringFlag{
+			Name:  "config, c",
+			Value: "",
+			Usage: `path to a config file, which overrides the default config.json in the specified bundle directory`,
+		},
 		cli.BoolFlag{
 			Name:  "detach,d",
 			Usage: "detach from the container's process",
