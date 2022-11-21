@@ -39,6 +39,10 @@ using the runc checkpoint command.`,
 			Usage: "allow open tcp connections",
 		},
 		cli.BoolFlag{
+			Name:  "tcp-skip-in-flight",
+			Usage: "skip in-flight tcp connections",
+		},
+		cli.BoolFlag{
 			Name:  "ext-unix-sk",
 			Usage: "allow external unix sockets",
 		},
@@ -144,6 +148,7 @@ func criuOptions(context *cli.Context) (*libcontainer.CriuOpts, error) {
 		ParentImage:             parentPath,
 		LeaveRunning:            context.Bool("leave-running"),
 		TcpEstablished:          context.Bool("tcp-established"),
+		TcpSkipInFlight:         context.Bool("tcp-skip-in-flight"),
 		ExternalUnixConnections: context.Bool("ext-unix-sk"),
 		ShellJob:                context.Bool("shell-job"),
 		FileLocks:               context.Bool("file-locks"),
